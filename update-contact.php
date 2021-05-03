@@ -48,7 +48,7 @@ $data = mysqli_fetch_assoc(mysqli_query($conn, $query));
         <div class="uk-margin">
             <label class="uk-form-label" for="form-horizontal-text">Email</label>
             <div class="uk-form-controls">
-                <input class="uk-input" id="form-horizontal-text" type="email" placeholder="your@email" name="email" required">
+                <input class="uk-input" id="form-horizontal-text" type="email" placeholder="your@email" name="email" required" value="<?php echo $data['contact_mail'] ?>">
             </div>
         </div>
 
