@@ -44,10 +44,10 @@ $uid = "U00" . $id_0;
 
 // CEK ID DUPLIKAT 
 $all_check = mysqli_query($conn, "SELECT COUNT(*) FROM users");
-$check = mysqli_query($conn, "SELECT COUNT(*) FROM users WHERE user_id = '$uid'");
+$check = mysqli_query($conn, "SELECT * FROM users WHERE user_id = '$uid'");
 $all_check = $all_check->num_rows;
 $check = $check->num_rows;
-// die(printf($all_check));
+// die(var_dump($check));
 // for($x = 0; $x < $all_check; $x++){
 //   if($check > 0){
 //     $id_0++;
@@ -72,7 +72,7 @@ if ($check > 0) {
   }
 }
 
-die();
+// die(printf($uid));
 
 $query = "INSERT INTO users (`user_id`, `user_name`, `user_address`, `user_phone`, `user_mail`, `user_password`, `user_birth`, `user_status`, `user_work`, `user_photo`) VALUES ('$uid', '$name', '$address', '$phone', '$mail', '$pass', '$birth', '$status', '$work_address', '$photo_final')";
 

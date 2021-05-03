@@ -6,7 +6,7 @@ $name = $_POST["search"];
 $owner = $_SESSION['user_id'];
 // die(var_dump($owner));
 
-$query = mysqli_query($conn, "SELECT * FROM contacts WHERE contact_name LIKE '%$name%'");
+$query = mysqli_query($conn, "SELECT * FROM contacts WHERE contact_name LIKE '%$name%' AND user_id = '$owner'");
 // $datas = mysqli_fetch_assoc($query);
 if (mysqli_num_rows($query) > 0) {
 
