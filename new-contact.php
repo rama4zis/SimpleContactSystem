@@ -11,7 +11,7 @@
 </div>
 
 <div class="uk-container create-account">
-    <form class="uk-form-horizontal uk-margin-large" method="POST" action="function/create-account.php" enctype="multipart/form-data">
+    <form class="uk-form-horizontal uk-margin-large" method="POST" action="function/create-contact.php" enctype="multipart/form-data">
         <div class="uk-margin">
             <label class="uk-form-label" for="form-horizontal-text">Nama</label>
             <div class="uk-form-controls">
@@ -40,14 +40,14 @@
             </div>
         </div>
 
-        <div class="uk-margin">
+        <!-- <div class="uk-margin">
             <label class="uk-form-label" for="form-horizontal-text">Password</label>
             <div class="uk-form-controls">
                 <input class="uk-input" id="form-horizontal-text" type="password" placeholder="Password" name="password">
             </div>
-        </div>
+        </div> -->
 
-        <div class="uk-margin">
+        <!-- <div class="uk-margin">
             <label class="uk-form-label" for="tanggal-lahir">Tanggal Lahir</label>
             <div class="uk-form-controls">
                 <input type="date" name="tanggal-lahir" id="tanggal-lahir">
@@ -69,7 +69,7 @@
             <div class="uk-form-controls">
                 <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Alamat Kantor" name="alamat-kantor">
             </div>
-        </div>
+        </div> -->
 
         <div class="uk-margin">
             <div class="uk-form-label" for="foto-kontak">Foto</div>

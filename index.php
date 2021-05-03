@@ -13,7 +13,16 @@
     <link rel="stylesheet" href="css/uikit.min.css" />
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
-
+<?php session_start(); 
+if( isset($_SESSION['create']) ){
+    ?>
+    <script>
+    alert("Create Account Successful");
+    </script>
+    <?php
+    // die(var_dump($_SESSION));
+}
+?>
 </head>
 
 <body>
@@ -27,17 +36,17 @@
                 <div class="uk-width-1-1@m">
                     <div class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
                         <h3 class="uk-card-title uk-text-center">Contact System</h3>
-                        <form>
+                        <form action="function/login.php" method="POST">
                             <div class="uk-margin">
                                 <div class="uk-inline uk-width-1-1">
                                     <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                                    <input class="uk-input uk-form-large" type="text">
+                                    <input class="uk-input uk-form-large" type="text" placeholder="E-Mail" name="mail" required>
                                 </div>
                             </div>
                             <div class="uk-margin">
                                 <div class="uk-inline uk-width-1-1">
                                     <span class="uk-form-icon" uk-icon="icon: lock"></span>
-                                    <input class="uk-input uk-form-large" type="password">
+                                    <input class="uk-input uk-form-large" type="password" placeholder="Password" name="pass" required>
                                 </div>
                             </div>
                             <div class="uk-margin">
