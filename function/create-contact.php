@@ -65,7 +65,7 @@ if ($check > 0) {
   }
 }
 
-die(printf($uid));
+// die(printf($uid));
 
 
 $upload = move_uploaded_file($photo_tmp, $target_dir . $uid . ".jpeg");
