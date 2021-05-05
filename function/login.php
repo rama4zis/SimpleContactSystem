@@ -30,4 +30,6 @@ if ($result > 0) {
     $_SESSION['user_password'] = $datas['user_password'];
     // die(print($host));
     header("Location: http://$host/profile.php");
+}else{
+    header("Location: http://$host/index.php");
 }

@@ -19,8 +19,17 @@ if( isset($_SESSION['create']) ){
     <script>
     alert("Create Account Successful");
     </script>
+
     <?php
+    unset($_SESSION['create']);
     // die(var_dump($_SESSION));
+}elseif( isset($_SESSION['duplicate_mail'])){
+    ?>
+    <script>
+    alert("Duplicate E-Mail, please create again");
+    </script>
+    <?php
+    unset($_SESSION['duplicate_mail']);
 }
 ?>
 </head>

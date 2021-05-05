@@ -15,6 +15,15 @@ $birth      =   $_POST["tanggal-lahir"];
 $status     =   $_POST["status"];
 $work_address   =   $_POST["alamat-kantor"];
 
+// duplicate email check 
+$mail_check = mysqli_query($conn, "SELECT * FROM users WHERE user_mail = '$mail'");
+// die(var_dump($mail_check->num_rows));
+if($mail_check->num_rows > 0){
+  $_SESSION['duplicate_mail'] = 1;
+  header("Location: http://$host/index.php");
+  exit();
+}
+
 // FPhoto 
 $photo_name      =   $_FILES["photo"]["name"];
 $photo_type      =   $_FILES["photo"]["type"];
@@ -78,16 +87,6 @@ $query = "INSERT INTO users (`user_id`, `user_name`, `user_address`, `user_phone
 
 
 if (mysqli_query($conn, $query)) {
-  // echo "New record created successfully";
-  // header("Location : $host/index.php");
-?>
-  <script>
-    // alert("Create Account Successful");
-    // setTimeout(function() {
-    //   window.location.href = 'https://$host';
-    // }, 5000);
-  </script>
-<?php
   $_SESSION['create'] = 1;
   // sleep(3);
   header("Location: http://$host/index.php");

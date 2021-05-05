@@ -12,7 +12,7 @@ $name       =   $_POST["nama"];
 $address    =   $_POST["alamat"];
 $phone      =   $_POST["nomor-telepon"];
 $mail       =   $_POST["email"];
-// $pass       =   $_POST["password"];
+$pass       =   $_POST["password"];
 $birth      =   $_POST["tanggal-lahir"];
 $status     =   $_POST["status"];
 $work_address   =   $_POST["alamat-kantor"];
@@ -48,7 +48,7 @@ $id = mysqli_fetch_assoc($data);
 $id_0 = $id['total'] + 1;
 $uid = "U00" . $id_0;
 
-$query = "UPDATE users SET `user_name` = '$name', `user_address` = '$address', `user_phone` = '$phone', `user_mail` = '$mail', `user_birth` = '$birth', `user_status` = '$status', `user_work` = '$work_address', `user_photo` = '$photo_final' WHERE `user_id` = '$user_id'";
+$query = "UPDATE users SET `user_name` = '$name', `user_password` = '$pass', `user_address` = '$address', `user_phone` = '$phone', `user_mail` = '$mail', `user_birth` = '$birth', `user_status` = '$status', `user_work` = '$work_address', `user_photo` = '$photo_final' WHERE `user_id` = '$user_id'";
 
 
 if (mysqli_query($conn, $query)) {
